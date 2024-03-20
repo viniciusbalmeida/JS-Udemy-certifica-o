@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo3</title>
+</head>
+<body>
+    <script>
+        let objeto = {
+            objeto2 : {
+                vetor : [1,2, {valor:55}]
+            }
+        };
+        //Qual opção exibirá o valor 55?
+        //console.log(objeto["objeto"].vetor.valor); ERRADO ELE O VETOR TEM QUE TER O NÚMERO PRA ACHAR EX: [2]//
+
+        //console.log(objeto.objeto2.vetor.valor); ESSE AQUI PELO MESMO MOTIVO //
+
+        console.log(objeto["objeto2"]["vetor"][2].valor);
+
+        //console.log(objeto.objeto2.vetor[3].valor);  3 NÃO EXISTE VAI DAR ERRO//
+
+
+
+    </script>    
+</body>
+</html>
+
