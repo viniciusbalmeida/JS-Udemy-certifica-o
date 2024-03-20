@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos</title>
+</head>
+<body>
+    <script>
+      let simbolo1 = "R$"
+      let simbolo2 = "$"
+      let simbolo3 = "€"
+
+      function moeda(simbolo) {
+        switch (simbolo){
+          case "R$":
+            console.log("Real");
+            break;
+          case "$":
+            console.log("Dolar");
+          case "€":
+            console.log("Euro")
+            break;
+          default:
+            console.log("não encontrado");
+            break;
+
+        } 
+
+      }
+
+
+      
+       
+      function moeda2(simbolo) {
+        if (simbolo == "R$") {
+            console.log("Real");
+
+        } else if (simbolo "$") {
+            console.log("Dolar");
+      
+        } else if (simbolo == "€") {
+            console.log("Euro");
+        
+        } else {
+            console.log("Não encontrado");
+
+        } 
+
+      }
+  
+    </script>    
+</body> 
+</html>
+
