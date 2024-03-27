@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <script>
+        function calcularVetor(vetor, numero) {
+  // Iterate over the input vector Iterar sobre o vetor de entrada
+     for (let i = 0; i < vetor.length; i++) {
+    // If the current element is greater than 5 Se o elemento atual for maior que 5
+       if (vetor[i] > 5) {
+      // Multiply the element by the input number  Multiplique o elemento pelo número de entrada
+         vetor[i] *= numero;
+    }
+  }
+  // Return the modified vector
+       return vetor;
+}
+
+console.log(calcularVetor([1, 5, 10, 20], 2)); // [2, 5, 20, 40]
+console.log(calcularVetor([1, 3, 4, 5], 10)); // [1, 3, 4, 5]
+console.log(calcularVetor([15, 20, 25, 30], 3)); // [45, 60, 75, 90]
+
+
+         
+         
+
+    </script>    
+</body>
+</html>
+
+
+
+        

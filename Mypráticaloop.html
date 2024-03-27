@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+</head>
+<body>
+    <script>
+        let alunos = [
+            {
+                nome: "Miguel",
+                nota: 10
+            },
+            {
+                nome: "Daniel",
+                nota: 9
+            },
+            {
+                nome: "Maria",
+                nota: 8
+            },
+            {
+                nome: "Zé",
+                nota: 5
+            },
+            {
+                nome: "Paula",
+                nota: 7
+            },
+            {
+                nome:"Neyilma",
+                nota: 5
+            }
+
+        ]
+         //Escreva um loop que percora o ver //
+        //Condição para pasar: nota maior que 7/
+        // length =  COMPRIMENTO DO VETOR = 6  //
+
+        console.log("FOR")
+        for (let i = 0; i < alunos.length; i++){
+            if (alunos[i].nota > 7){
+                    console.log(`${alunos[i].nome}:passou`);
+            }
+            
+        }
+        console.log("------");
+        console.log("FOR OF");
+        for (let aluno of alunos) {
+            if (aluno.nota > 7) {
+                console.log(`${aluno.nome}:passou`);
+            }
+
+        }
+
+    </script>    
+</body>
+</html>
+
+
+
+        

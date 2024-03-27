@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+    <script>
+        //escreva uma função que receberá um valor n e percorrerá um loop
+        //Para exibir no sonsoleo valor na posição N na sequen. de Fibonacci.
+        //fibonacci: 0,1,1,2,3,5,...
+        //O número é igual a soma dos dois anteriores.
+
+    function fibonacci(n)
+         if (n < 2) {
+            return n;
+         }
+
+         let anterior = 1;
+         let penultimo = 0;
+
+         for (let anterior = 1; i <= n; i++){
+              if(i==n){
+                return penultimo + anterior;
+              }
+
+         }
+         let temp = penultimo;
+         penultimo = anterior;
+         anterior =temp + penultimo;
+
+
+
+         
+
+    </script>    
+</body>
+</html>
+
+
+
+        

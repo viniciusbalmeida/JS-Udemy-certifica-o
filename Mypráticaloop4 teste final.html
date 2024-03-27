@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <script>
+        /*Teste Final
+Vamos testar como está seu conhecimento de tudo que falamos neste curso.
+
+Crie uma função chamada testeFinal que:
+
+Receberá uma String e um número como parâmetros
+
+Testará se a String é igual as seguintes palavras e executará um código para o descrito em cada caso.
+
+“mundojs”: Exibirá "MundoJS" no console e retornará o parametro Número.
+
+“soma”: Retornará o resultado da soma da metade do parâmetro número com o quadrado dele mesmo.
+
+“vetor”: Criará e retornará um vetor com 5 elementos onde cada elemento é igual ao parâmetro número mais o dobro do índice do vetor:
+
+Exemplo: número = 3:
+
+Primeiro item igual a 3 + 0 * 2
+
+Segundo item igual a 3 + 1 * 2
+
+Assim por diante..
+
+Retornará [3, 5, 7, 9, 11]
+
+“booleano”: Faça o mesmo vetor do caso vetor e retorne true (o valor booleano, não uma string) se a soma dos elementos deste vetor for maior que 35, do contrário, exibe false.
+
+Caso o parâmetro String seja diferente das opções acima, retornará -1.*/
+
+//testeFinal
+
+    function testeFinal(string, number) {
+  if (string === 'mundojs') {
+    console.log('MundoJS');
+    return number;
+  } else if (string === 'soma') {
+    return number / 2 + Math.pow(number, 2);
+  } else if (string === 'vetor') {
+    const vector = [];
+    for (let i = 0; i < 5; i++) {
+      vector.push(number + i * 2);
+    }
+    return vector;
+  } else if (string === 'booleano') {
+    const vector = [];
+    for (let i = 0; i < 5; i++) {
+      vector.push(number + i * 2);
+    }
+    if (vector.reduce((a, b) => a + b, 0) > 35) {
+      return true;
+    } else {
+      return false;
+    }
+  } else {
+    return -1;
+  }
+}
+         
+
+    </script>    
+</body>
+</html>
+
+
+/*Vamos examinar a função passo a passo:
+
+A função leva dois parâmetros stringe number.
+Verifica se o stringparâmetro é igual a "mundojs". 
+Se for, ele registra "MundoJS" no console e retorna o numberparâmetro.
+Se o stringparâmetro for igual a "soma", retorna 
+o resultado da expressão number / 2 + Math.pow(number, 2).
+Se o stringparâmetro for igual a "vetor", 
+ele cria um array vazio chamado vector, 
+e depois usa um forloop para preenchê-lo com 5 elementos,
+ sendo cada um o resultado da expressão number + i * 2(onde ié o índice atual),
+  e por fim retorna o vectorarray .
+Se o stringparâmetro for igual a "booleano",
+ele cria um array vazio chamado vectore o preenche com 5 elementos,
+ sendo cada um o resultado da expressão number + i * 2(onde iestá o índice atual), 
+ e então verifica se a soma de todos os elementos do vectorarray é maior que 35. Se for, 
+ ele retorna true; caso contrário, ele retorna false.
+Se o stringparâmetro não for nenhum dos acima, 
+ele retornará -1.
+Observe que esta implementação assume que os parâmetros de 
+entrada serão sempre válidos e não nulos, já que o prompt não 
+especificou nenhuma restrição adicional. Se este não for o caso,
+ verificações adicionais deverão ser adicionadas para garantir que a 
+ função se comporte corretamente quando receber uma entrada inesperada.
+
+
+
+
+ outro jeito de resolver 
+
+
+ Solução:
+
+
+
+function testeFinal(umaString, umNumero){
+    // Aqui criei uma variavel para retornar no final da função, mas você pode
+    // retornar o valor diretamente dentro de cada "case"
+    let retorno;
+ 
+    switch(umaString){
+ 
+        //1) “mundojs”: Exibirá "MundoJS" no console e retornará o parâmetro Número.
+        case "mundojs":
+            // Bem simples, exibir o texto (cuidado com letras maiúsculas) e retornar o número
+            console.log("MundoJS");
+ 
+            // Atribui o número para a variável "retorno"
+            retorno = umNumero;
+            break;
+ 
+        // 2) “soma”: Retornará o resultado da soma da metade do parâmetro número com o quadrado dele mesmo.
+        case "soma":
+            // Pegando a metade do parâmetro número
+            let metadeNumero = (umNumero/2);
+ 
+            // Pegando o quadrado do parâmetro número
+            let quadradoNumero = (umNumero*umNumero);
+ 
+            // atribuindo a soma das variáveis a variável retorno
+            retorno = metadeNumero + quadradoNumero;
+            break;
+ 
+        // 3) “vetor”: Criará e retornará um vetor com 5 elementos.
+                            // Cada elemento é igual ao parâmetro número mais o dobro do índice do vetor:
+        case "vetor":
+ 
+            // Criada a variavel com um vetor vazio (importante para o FOR abaixo)
+            let vetor = [];
+ 
+            // Utilizado o for para fazer 5 loops no vetor
+            for(let i = 0; i< 5; i++){
+ 
+                // Atribuído umNumero  mais o dobro do índice.
+                vetor[i] = umNumero + (i * 2);
+            }
+ 
+            // armazenado  o vetor na variável de retorno
+            retorno = vetor;
+            break;
+ 
+         // 4) “booleano”: Faça o mesmo vetor do caso vetor e retorne true 
+                        // se a soma dos elementos deste vetor for maior que 35, do contrário, exibe false.
+        case "booleano":
+ 
+            // Criado um vetor. Observe que o nome é diferente do vetor anterior pois se for igual da erro de escopo.
+            let array = [];
+ 
+            // Criada variavel total para teste no retorno;
+            let total = 0;
+ 
+            // Feito 5 loops no vetor
+            for(let i = 0; i < 5; i++){
+ 
+                // Atribuído umNumero  mais o dobro do índice.
+                array[i] = umNumero + (i * 2);
+                
+                // Adicionando o total
+                total = total + array[i];
+            }
+ 
+            //Testa se o total é mair que 35
+            retorno = total > 35;
+            break;
+      
+         // Caso o parâmetro String seja diferente das opções acima, retornará -1.
+        default:
+            // Retorno padrão
+            retorno = -1;
+    }
+    // Retorno da função
+    return retorno;
+}
